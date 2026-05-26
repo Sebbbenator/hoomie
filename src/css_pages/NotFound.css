@@ -1,0 +1,26 @@
+/* 404 */
+.not-found-title {
+  font-size: 5rem;
+}
+
+.not-found {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.not-found p {
+  margin-bottom: 2rem;
+}
+
+.not-found-link {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #4a50c7;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-link:hover {
+  background-color: #5a60d7;
+}

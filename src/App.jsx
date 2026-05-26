@@ -10,7 +10,6 @@ import CalendarPage from "./pages/CalenderPage";
 export default function App() {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<DashboardPage />} />
         <Route path="/task" element={<TaskPage />} />
@@ -19,6 +18,7 @@ export default function App() {
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Navbar />
     </>
   );
 }
