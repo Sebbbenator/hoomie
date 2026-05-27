@@ -1,15 +1,30 @@
+@font-face {
+  font-family: "Matcha-Cif";
+  src: url(../src/fonts/Matcha-Cih.ttf) format("truetype");
+}
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #e0e0e0;
-  background-color: #34495e;
+  --mascot-font: "Matcha-Cif", sans-serif;
+  --main-font: Poopins, inter, sans-serif;
+  
+  --mascot-color: #0E0626;
+  --background-color: #2F3136;
+  --cards-color: #444850;
+  --navigation-color: #3A3D43;
+
+  --green: #0CC594;
+  --blue: #0A8AE6;
+  --purple: #A980FF;
+  --orange: #FF7F3A;
+  --yellow: #FFB700;
+
+
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
 
