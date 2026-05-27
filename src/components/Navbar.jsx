@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav>
       <NavLink to="/task">Task</NavLink>
       <NavLink to="/list">List</NavLink>
-      <NavLink to="/">Dashboard</NavLink>
+      <NavLink to="/dashboard">Dashboard</NavLink>
       <NavLink to="/calendar">Calendar</NavLink>
       <NavLink to="/profile">Profile</NavLink>
     </nav>
