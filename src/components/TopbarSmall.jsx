@@ -1,8 +1,26 @@
+import notificationDot from "../assets/icons/notification-dot.svg";
 import "../css_components/TopbarSmall.css";
 
-export default function TopbarSmall({ color = "var(--green)" }) {
+
+export default function TopbarSmall({
+  color = "var(--green)",
+  title = "Side Titel",
+  notificationLabel = "Open notifications",
+  onNotificationClick,
+}) {
   return (
     <div className="topbar-small" style={{ "--topbar-color": color }}>
+      <div className="topbar-small__content">
+        <h1 className="topbar-small__title">{title}</h1>
+        <button
+          type="button"
+          className="topbar-small__notification"
+          onClick={onNotificationClick}
+          aria-label={notificationLabel}
+        >
+          <img src={notificationDot} alt="" aria-hidden="true" />
+        </button>
+      </div>
       <svg
         className="topbar-small__shape"
         viewBox="0 0 393 101"
