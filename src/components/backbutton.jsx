@@ -12,7 +12,7 @@ export default function BackButton({ className = "" }) {
       onClick={() => navigate(-1)}
       aria-label="Go back"
     >
-      <img src={backArrow} alt="" aria-hidden="true" width="24" height="24" />
+      <img src={backArrow} alt="" aria-hidden="true" width="56" height="56" />
     </button>
   );
 }
