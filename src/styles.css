@@ -1,10 +1,15 @@
 @font-face {
-  font-family: "Matcha-Cif";
+  font-family: "Matcha-Cih";
   src: url(../src/fonts/Matcha-Cih.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Poppins";
+  src: url(../src/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
 :root {
-  --mascot-font: "Matcha-Cif", sans-serif;
-  --main-font: Poopins, inter, sans-serif;
+  --mascot-font: "Matcha-Cih", sans-serif;
+  --main-font: "Poopins, inter", sans-serif;
 
   --dark-color: #23262b;
   --background-color: #2f3136;
