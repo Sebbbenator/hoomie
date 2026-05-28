@@ -8,7 +8,6 @@ export default function DashboardPage() {
       </header>
       <main>
         <p>Welcome to the dashboard page...</p>
-        <TopbarBig></TopbarBig>
 
       </main>
     </>
