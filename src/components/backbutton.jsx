@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import backArrow from "../assets/backarrow.svg";
+import backArrow from "../assets/icons/left-arrow.svg";
 import "../css_components/BackButton.css";
 
 export default function BackButton({ className = "" }) {
