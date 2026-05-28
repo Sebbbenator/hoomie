@@ -1,3 +1,5 @@
+import TopbarBig from "../components/TopbarBig";
+
 export default function DashboardPage() {
   return (
     <>
@@ -6,6 +8,7 @@ export default function DashboardPage() {
       </header>
       <main>
         <p>Welcome to the dashboard page...</p>
+        <TopbarBig></TopbarBig>
 
       </main>
     </>

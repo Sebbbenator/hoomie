@@ -1,0 +1,24 @@
+.topbar-big {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.topbar-big__shape {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.topbar-big__shape path {
+  fill: var(--topbar-color);
+}
+
+.topbar-big__back {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
