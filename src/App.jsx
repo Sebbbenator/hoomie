@@ -11,8 +11,9 @@ import NotFoundPage from "./pages/NotFoundPage";
 import ProfilePage from "./pages/ProfilePage";
 import CalendarPage from "./pages/CalenderPage";
 import PreboardingPage from "./pages/PreboardingPage";
+import PreboardingTaskPage from "./pages/PreboardingTaskPage";
 
- // Ai hjalp med hvordan jeg kunne implementere lottie animationen, når appen starter */
+// Ai hjalp med hvordan jeg kunne implementere lottie animationen, når appen starter */
 const OPEN_APP_KEY = "hoomie-open-app-played";
 
 export default function App() {
@@ -27,10 +28,11 @@ export default function App() {
   //Ai hjalp med hvordan jeg skulle gemme navbar på log in og sign up siden
   const hideNavbar =
     location.pathname === "/" ||
+    location.pathname === "/preboarding-task" ||
     location.pathname === "/signup" ||
     location.pathname === "/signin";
 
-    // Ai hjalp med hvordan jeg kunne implementere lottie animationen, når appen starter */
+  // Ai hjalp med hvordan jeg kunne implementere lottie animationen, når appen starter */
   if (showOpenApp) {
     return (
       <StartupSplash
@@ -51,6 +53,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<PreboardingPage />} />
+        <Route path="/preboarding-task" element={<PreboardingTaskPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />

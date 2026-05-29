@@ -64,9 +64,9 @@ position: absolute;
 }
 
 .preboarding-page__button.auth-button--secondary {
-  background-color: #1593f2;
+  background-color: var(--auth-button-secondary-bg, #1593f2);
   color: #0d2233;
-  box-shadow: 0 8px 16px rgba(21, 147, 242, 0.18);
+  box-shadow: none;
 }
 
 @media (max-width: 640px) {
