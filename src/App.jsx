@@ -12,6 +12,9 @@ import ProfilePage from "./pages/ProfilePage";
 import CalendarPage from "./pages/CalenderPage";
 import PreboardingPage from "./pages/PreboardingPage";
 import PreboardingTaskPage from "./pages/PreboardingTaskPage";
+import PreboardingFeaturesPage from "./pages/PreboardingFeaturesPage";
+import PreboardingLeaderboardPage from "./pages/PreboardingLeaderboardPage";
+import PreboardingSignupPage from "./pages/PreboardingSignupPage";
 
 // Ai hjalp med hvordan jeg kunne implementere lottie animationen, når appen starter */
 const OPEN_APP_KEY = "hoomie-open-app-played";
@@ -29,6 +32,9 @@ export default function App() {
   const hideNavbar =
     location.pathname === "/" ||
     location.pathname === "/preboarding-task" ||
+    location.pathname === "/preboarding-features" ||
+    location.pathname === "/preboarding-leaderboard" ||
+    location.pathname === "/preboarding-signup" ||
     location.pathname === "/signup" ||
     location.pathname === "/signin";
 
@@ -54,6 +60,18 @@ export default function App() {
       <Routes>
         <Route path="/" element={<PreboardingPage />} />
         <Route path="/preboarding-task" element={<PreboardingTaskPage />} />
+        <Route
+          path="/preboarding-features"
+          element={<PreboardingFeaturesPage />}
+        />
+        <Route
+          path="/preboarding-leaderboard"
+          element={<PreboardingLeaderboardPage />}
+        />
+        <Route
+          path="/preboarding-signup"
+          element={<PreboardingSignupPage />}
+        />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
