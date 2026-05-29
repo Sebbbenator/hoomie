@@ -7,13 +7,19 @@ export default function AuthButton({
   type = "button",
   variant = "primary",
   className = "",
+  secondaryColor,
 }) {
+  const style = secondaryColor
+    ? { "--auth-button-secondary-bg": secondaryColor }
+    : undefined;
+
   return (
     <button
       type={type}
       className={`auth-button auth-button--${variant} ${className}`.trim()}
       onClick={onClick}
       disabled={disabled}
+      style={style}
     >
       {children}
     </button>
