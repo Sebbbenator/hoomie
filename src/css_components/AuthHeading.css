@@ -1,6 +1,7 @@
 .auth-heading {
   text-align: center;
   margin-bottom: 2.5rem;
+  font-family: var(--main-font);
 }
 
 .auth-heading__title {
