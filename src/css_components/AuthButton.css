@@ -25,7 +25,7 @@
 
 .auth-button--secondary {
   border: none;
-  background-color: var(--violet);
+  background-color: var(--auth-button-secondary-bg, var(--violet));
   color: #0e0626;
   box-shadow: 0 8px 12px rgba(169, 128, 255, 0.15);
 }
