@@ -1,12 +1,13 @@
-import "../css/Hoomie.css";
+import "../css_components/Hoomie.css";
+import bodyImg from "../assets/Hoomie/Hoomie Body.svg";
 
-export default function Hoomie() {
+export default function Hoomie({eyes}) {
   return (
     <div className="hoomie">
-      <h1 className="hoomie__title">Welcome to Hoomie!</h1>
-      <p className="hoomie__subtitle">
-        Your ultimate roommate management app. Sign up or log in to get started!
-      </p>
+      <div className="hoomie__image-wrap">
+        <img src={bodyImg} alt="Hoomie body" className="hoomie__body" />
+        <img src={eyes} alt="Hoomie eyes" className="hoomie__eyes" />
+      </div>
     </div>
   );
 }
