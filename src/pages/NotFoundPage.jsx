@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import TopbarBig from "../components/TopbarBig";
 import "../css_pages/NotFound.css";
 
