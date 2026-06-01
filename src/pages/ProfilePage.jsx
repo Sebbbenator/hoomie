@@ -2,12 +2,34 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { supabase } from "../lib/supabaseClient";
 import TopbarLarge from "../components/TopbarLarge";
+import starIcon from "../assets/icons/point.svg";
 import "../css_pages/ProfilePage.css";
 
 const XP_TOTAL_BLOCKS = 8;
 const XP_FILLED_BLOCKS = 3;
 
 const TABS = ["Historik", "Milepæle", "Dokumenter", "Ejendele"];
+
+const NOTIFICATIONS = [
+  {
+    id: 1,
+    user: "Bruger",
+    time: "For 2 timer siden",
+    description: "Du har fuldført din første opgave. Godt gået!",
+  },
+  {
+    id: 2,
+    user: "Bruger",
+    time: "I går",
+    description: "Taget skrald ud.",
+  },
+  {
+    id: 3,
+    user: "Bruger",
+    time: "For 3 dage siden",
+    description: "Du har nået et nyt milepæl, se din nye hat.",
+  },
+];
 
 export default function ProfilePage() {
   const navigate = useNavigate();
@@ -83,6 +105,30 @@ export default function ProfilePage() {
             </button>
           ))}
         </div>
+
+        <section className="profile-notifications">
+          <div className="profile-notifications__header">
+            <h2 className="profile-notifications__title">Notifikationer</h2>
+            <span className="profile-notifications__see-all" onClick={() => navigate("/notifications")} role="button">Se Alle</span>
+          </div>
+          {NOTIFICATIONS.map((n) => (
+            <div key={n.id} className="profile-notification-card">
+              <div className="profile-notification-card__top">
+                <div className="profile-notification-card__avatar" aria-hidden="true" />
+                <div className="profile-notification-card__meta">
+                  <span className="profile-notification-card__user">{n.user}</span>
+                  <span className="profile-notification-card__time">{n.time}</span>
+                </div>
+                <div className="profile-notification-card__icons">
+                  <img src={starIcon} alt="" aria-hidden="true" />
+                  <span>#</span>
+                </div>
+              </div>
+              <p className="profile-notification-card__description">{n.description}</p>
+              <button className="profile-notification-card__action">Godt klaret!</button>
+            </div>
+          ))}
+        </section>
 
         {error && <p>{error}</p>}
         <button className="profile-logout-btn" onClick={handleLogOut} disabled={loading}>

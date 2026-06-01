@@ -70,6 +70,106 @@
   color: var(--text-color-black);
 }
 
+.profile-notifications__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-s);
+}
+
+.profile-notifications__title {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.profile-notifications__see-all {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.profile-notifications {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.profile-notification-card {
+  background: var(--cards-color);
+  border-radius: 14px;
+  padding: var(--spacing-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.profile-notification-card__top {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+}
+
+.profile-notification-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--mascot-color);
+  flex-shrink: 0;
+}
+
+.profile-notification-card__meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+}
+
+.profile-notification-card__user {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.profile-notification-card__time {
+  color: var(--text-color);
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.profile-notification-card__icons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--yellow);
+  font-size: 1rem;
+}
+
+.profile-notification-card__icons img {
+  width: 28px;
+  height: 28px;
+}
+
+.profile-notification-card__description {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.profile-notification-card__action {
+  width: 100%;
+  padding: var(--spacing-s);
+  border: none;
+  border-radius: 10px;
+  background: var(--navigation-color);
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .profile-logout-btn {
   width: 100%;
   padding: var(--spacing-m);
