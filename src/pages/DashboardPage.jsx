@@ -11,7 +11,6 @@ export default function DashboardPage() {
       </header>
       <main>
         <p>Welcome to the dashboard page...</p>
-        <Hoomie HoomieState={Hoomie404} />
       </main>
     </>
   );
