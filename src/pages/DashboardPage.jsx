@@ -1,7 +1,4 @@
 import TopbarBig from "../components/TopbarBig";
-import Hoomie from "../components/Hoomie";
-import smileEyes from "../assets/Hoomie/Øjne/Property 1=Smile.svg";
-
 
 export default function DashboardPage() {
   return (
@@ -13,7 +10,6 @@ export default function DashboardPage() {
         <p>Welcome to the dashboard page...</p>
 
       </main>
-      <Hoomie eyes={smileEyes} />
     </>
   );
 }
