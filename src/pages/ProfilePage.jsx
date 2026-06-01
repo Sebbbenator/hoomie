@@ -85,7 +85,7 @@ export default function ProfilePage() {
         </div>
 
         {error && <p>{error}</p>}
-        <button onClick={handleLogOut} disabled={loading}>
+        <button className="profile-logout-btn" onClick={handleLogOut} disabled={loading}>
           {loading ? "Logger ud..." : "Log ud"}
         </button>
       </main>

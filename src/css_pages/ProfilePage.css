@@ -69,3 +69,21 @@
   background: var(--blue);
   color: var(--text-color-black);
 }
+
+.profile-logout-btn {
+  width: 100%;
+  padding: var(--spacing-m);
+  border: none;
+  border-radius: 14px;
+  background: var(--red);
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-logout-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
