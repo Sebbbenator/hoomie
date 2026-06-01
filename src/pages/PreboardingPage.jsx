@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import * as LottieReact from "lottie-react";
 import AuthButton from "../components/AuthButton";
 import AuthHeading from "../components/AuthHeading";
-import preboardingAnimation from "../assets/lottie/Preboarding-Start.json";
+import Loading from "../components/Loading";
 import "../css_pages/PreboardingPage.css";
 /* Ai hjalp med hvordan jeg kunne implementere lottie animationen */
 const Lottie =
@@ -13,22 +13,39 @@ export default function PreboardingPage() {
   const navigate = useNavigate();
   const lottieRef = useRef(null);
   const [finished, setFinished] = useState(false);
+  const [animationData, setAnimationData] = useState(null);
 
   useEffect(() => {
-    lottieRef.current?.play?.();
+    let mounted = true;
+    import("../assets/lottie/Preboarding-Start.json").then((m) => {
+      if (mounted) setAnimationData(m.default ?? m);
+    });
+    return () => {
+      mounted = false;
+    };
   }, []);
+
+  useEffect(() => {
+    if (animationData) lottieRef.current?.play?.();
+  }, [animationData]);
   /* dette er dog lavet af os */
   return (
     <main className="preboarding-page">
       <div className="preboarding-page__stage">
-        <Lottie
-          lottieRef={lottieRef}
-          animationData={preboardingAnimation}
-          autoplay
-          loop={false}
-          onComplete={() => setFinished(true)}
-          className="preboarding-page__animation"
-        />
+        {animationData ? (
+          <Lottie
+            lottieRef={lottieRef}
+            animationData={animationData}
+            autoplay
+            loop={false}
+            onComplete={() => setFinished(true)}
+            className="preboarding-page__animation"
+          />
+        ) : (
+          <div className="preboarding-page__animation">
+            <Loading />
+          </div>
+        )}
         <div className="preboarding-page__overlay">
           <AuthHeading
             title="Velkommen til Hoomie!"
