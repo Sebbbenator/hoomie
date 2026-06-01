@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { supabase } from "../lib/supabaseClient";
 import TopbarLarge from "../components/TopbarLarge";
+import "../css_pages/ProfilePage.css";
+
+const XP_TOTAL_BLOCKS = 8;
+const XP_FILLED_BLOCKS = 3;
 
 export default function ProfilePage() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      const name =
+        data?.user?.user_metadata?.full_name ||
+        data?.user?.user_metadata?.name ||
+        data?.user?.email?.split("@")[0] ||
+        "";
+      setUserName(name);
+    });
+  }, []);
 
   const handleLogOut = async () => {
     setError("");
@@ -32,17 +48,30 @@ export default function ProfilePage() {
     <>
       <header>
         <TopbarLarge
-          title="Profile"
+          title="Profil"
           color="var(--blue)"
           onSettingsClick={handleSettingsClick}
-          settingsLabel="Go to settings"
+          settingsLabel="Gå til indstillinger"
         />
       </header>
-      <main>
-        <p>This is the profile page.</p>
+      <main className="profile-page">
+        <p className="profile-greeting">
+          Godmorgen {userName}
+        </p>
+
+        <div className="profile-xp-bar" aria-label="XP fremgang">
+          <div className="profile-xp-level">1</div>
+          {Array.from({ length: XP_TOTAL_BLOCKS }, (_, i) => (
+            <div
+              key={i}
+              className={`profile-xp-block${i < XP_FILLED_BLOCKS ? " profile-xp-block--filled" : ""}`}
+            />
+          ))}
+        </div>
+
         {error && <p>{error}</p>}
         <button onClick={handleLogOut} disabled={loading}>
-          {loading ? "Logging out..." : "Log out"}
+          {loading ? "Logger ud..." : "Log ud"}
         </button>
       </main>
     </>
