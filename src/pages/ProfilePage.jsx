@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { supabase } from "../lib/supabaseClient";
+import TopbarLarge from "../components/TopbarLarge";
 
 export default function ProfilePage() {
   const navigate = useNavigate();
@@ -23,10 +24,19 @@ export default function ProfilePage() {
     navigate("/", { replace: true });
   };
 
+  const handleSettingsClick = () => {
+    navigate("/settings");
+  };
+
   return (
     <>
       <header>
-        <h1>Profile</h1>
+        <TopbarLarge
+          title="Profile"
+          color="var(--blue)"
+          onSettingsClick={handleSettingsClick}
+          settingsLabel="Go to settings"
+        />
       </header>
       <main>
         <p>This is the profile page.</p>
