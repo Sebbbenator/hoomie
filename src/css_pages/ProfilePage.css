@@ -46,3 +46,26 @@
 .profile-xp-block--filled {
   background: var(--yellow);
 }
+
+.profile-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-s);
+}
+
+.profile-tab {
+  padding: var(--spacing-m);
+  border: none;
+  border-radius: 14px;
+  background: var(--cards-color);
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-tab--active {
+  background: var(--blue);
+  color: var(--text-color-black);
+}

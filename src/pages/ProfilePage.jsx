@@ -7,11 +7,14 @@ import "../css_pages/ProfilePage.css";
 const XP_TOTAL_BLOCKS = 8;
 const XP_FILLED_BLOCKS = 3;
 
+const TABS = ["Historik", "Milepæle", "Dokumenter", "Ejendele"];
+
 export default function ProfilePage() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [userName, setUserName] = useState("");
+  const [activeTab, setActiveTab] = useState("Historik");
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => {
@@ -66,6 +69,18 @@ export default function ProfilePage() {
               key={i}
               className={`profile-xp-block${i < XP_FILLED_BLOCKS ? " profile-xp-block--filled" : ""}`}
             />
+          ))}
+        </div>
+
+        <div className="profile-tabs">
+          {TABS.map((tab) => (
+            <button
+              key={tab}
+              className={`profile-tab${activeTab === tab ? " profile-tab--active" : ""}`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </button>
           ))}
         </div>
 
