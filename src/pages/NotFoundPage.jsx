@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import TopbarBig from "../components/TopbarBig";
 import "../css_pages/NotFound.css";
 
 export default function NotFoundPage() {
@@ -6,7 +7,9 @@ export default function NotFoundPage() {
 
   return (
     <div className="notfound-page">
-      <div className="notfound-top"></div>
+      <div className="notfound-top">
+        <TopbarBig color="var(--yellow)" showBack={false} />
+      </div>
 
       <div className="notfound-bottom">
         <h1>Åh nej!</h1>
