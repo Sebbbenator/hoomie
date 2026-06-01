@@ -23,6 +23,16 @@
   background-color: rgba(169, 128, 255, 0.12);
 }
 
+.auth-button--danger {
+  border: 2px solid var(--red);
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.auth-button--danger:hover:not(:disabled) {
+  background-color: rgba(233, 64, 58, 0.12);
+}
+
 .auth-button--secondary {
   border: none;
   background-color: var(--auth-button-secondary-bg, var(--violet));
