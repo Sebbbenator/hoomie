@@ -1,6 +1,6 @@
 {
   "name": "web-app-hoomie",
-  "base": "/web-app-hoomie/",
+  "base": "/hoomie/",
   "private": true,
   "version": "1.0.0",
   "type": "module",
