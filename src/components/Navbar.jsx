@@ -49,7 +49,6 @@ export default function Navbar() {
         }
       >
         <img src="/logo.svg" alt="Hoomie" className="navbar-logo" />
-        <span className="navbar-label">Dashboard</span>
       </NavLink>
       <NavLink
         to="/calendar"
