@@ -24,7 +24,7 @@ export default function Navbar() {
             fill="currentColor"
           />
         </NavbarIcon>
-        <span className="navbar-label">Task</span>
+        <span className="navbar-label">Opgaver</span>
       </NavLink>
       <NavLink
         to="/list"
@@ -40,7 +40,7 @@ export default function Navbar() {
             fill="currentColor"
           />
         </NavbarIcon>
-        <span className="navbar-label">List</span>
+        <span className="navbar-label">Indkøb</span>
       </NavLink>
       <NavLink
         to="/dashboard"
@@ -48,13 +48,7 @@ export default function Navbar() {
           `navbar-link navbar-link--dashboard${isActive ? " is-active" : ""}`
         }
       >
-        <NavbarIcon label="Dashboard">
-          <path
-            d="M12 19.137C12 24 16.02 26.591 18.962 28.911C20 29.729 21 30.5 22 30.5C23 30.5 24 29.73 25.038 28.91C27.981 26.592 32 24 32 19.138C32 14.276 26.5 10.825 22 15.501C17.5 10.825 12 14.274 12 19.137Z"
-            fill="currentColor"
-          />
-        </NavbarIcon>
-        <span className="navbar-label">Dashboard</span>
+        <img src="/logo.svg" alt="Hoomie" className="navbar-logo" />
       </NavLink>
       <NavLink
         to="/calendar"
@@ -70,7 +64,7 @@ export default function Navbar() {
             fill="currentColor"
           />
         </NavbarIcon>
-        <span className="navbar-label">Calendar</span>
+        <span className="navbar-label">Kalender</span>
       </NavLink>
       <NavLink
         to="/profile"
@@ -86,7 +80,7 @@ export default function Navbar() {
             fill="currentColor"
           />
         </NavbarIcon>
-        <span className="navbar-label">Profile</span>
+        <span className="navbar-label">Profil</span>
       </NavLink>
     </nav>
   );
