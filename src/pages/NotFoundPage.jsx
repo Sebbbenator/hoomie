@@ -15,7 +15,7 @@ export default function NotFoundPage() {
           color="var(--yellow)"
           showTitle={false}
           showSettings={false}
-       
+        />
         <div className="notfound-hoomie">
           <Hoomie HoomieState={Hoomie404} />
         </div>
