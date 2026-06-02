@@ -1,10 +1,13 @@
 import "../css_components/TopbarBig.css";
 import BackButton from "./backbutton";
 
-export default function TopbarBig({ color = "var(--purple)" }) {
+export default function TopbarBig({
+  color = "var(--purple)",
+  showBack = true,
+}) {
   return (
     <div className="topbar-big" style={{ "--topbar-color": color }}>
-      <BackButton className="topbar-big__back" />
+      {showBack && <BackButton className="topbar-big__back" />}
       <svg
         className="topbar-big__shape"
         viewBox="0 0 393 200"
