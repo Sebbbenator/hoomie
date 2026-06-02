@@ -60,3 +60,9 @@
   font-size: 0.75rem;
   letter-spacing: 0.02em;
 }
+
+.navbar-logo {
+  width: 28px;
+  height: 28px;
+  display: block;
+}

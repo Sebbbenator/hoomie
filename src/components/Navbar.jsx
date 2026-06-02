@@ -48,12 +48,7 @@ export default function Navbar() {
           `navbar-link navbar-link--dashboard${isActive ? " is-active" : ""}`
         }
       >
-        <NavbarIcon label="Dashboard">
-          <path
-            d="M12 19.137C12 24 16.02 26.591 18.962 28.911C20 29.729 21 30.5 22 30.5C23 30.5 24 29.73 25.038 28.91C27.981 26.592 32 24 32 19.138C32 14.276 26.5 10.825 22 15.501C17.5 10.825 12 14.274 12 19.137Z"
-            fill="currentColor"
-          />
-        </NavbarIcon>
+        <img src="/logo.svg" alt="Hoomie" className="navbar-logo" />
         <span className="navbar-label">Dashboard</span>
       </NavLink>
       <NavLink
