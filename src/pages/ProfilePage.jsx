@@ -39,6 +39,19 @@ export default function ProfilePage() {
   const [error, setError] = useState("");
   const [userName, setUserName] = useState("");
   const [activeTab, setActiveTab] = useState("Historik");
+  const hour = new Date().getHours();
+
+  let greeting;
+
+    if (hour >= 5 && hour < 12) {
+      greeting = "Godmorgen";
+    } else if (hour >= 12 && hour < 17) {
+      greeting = "Goddag";
+    } else if (hour >= 17 && hour < 22) {
+      greeting = "Godaften";
+    } else {
+      greeting = "Godnat";
+    }
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => {
@@ -85,7 +98,9 @@ export default function ProfilePage() {
         </div>
       </header>
       <main className="profile-page">
-        <p className="profile-greeting">Godmorgen {userName}</p>
+        <p className="profile-greeting">
+          {greeting} {userName}
+        </p>
 
         <div className="profile-xp-bar" aria-label="XP fremgang">
           <div className="profile-xp-level">1</div>
