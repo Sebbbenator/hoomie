@@ -46,7 +46,7 @@ export default function ProfilePage() {
     if (hour >= 5 && hour < 12) {
       greeting = "Godmorgen";
     } else if (hour >= 12 && hour < 17) {
-      greeting = "Goddag";
+      greeting = "Hejsa";
     } else if (hour >= 17 && hour < 22) {
       greeting = "Godaften";
     } else {
