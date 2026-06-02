@@ -1,3 +1,25 @@
+.profile-top {
+  position: relative;
+}
+
+.profile-hoomie {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.profile-hoomie .hoomie {
+  padding: 0;
+}
+
+.profile-hoomie .hoomie__image-wrap {
+  width: clamp(130px, 34vw, 190px);
+  margin: 0;
+}
+
 .profile-page {
   padding: var(--spacing-m);
   padding-bottom: 7rem;
