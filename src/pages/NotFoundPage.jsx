@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router";
 import TopbarBig from "../components/TopbarBig";
+import Hoomie from "../components/Hoomie";
+import Hoomie404 from "../assets/Hoomie/Hoomie404.svg";
 import "../css_pages/NotFound.css";
 
 export default function NotFoundPage() {
@@ -9,6 +11,9 @@ export default function NotFoundPage() {
     <div className="notfound-page">
       <div className="notfound-top">
         <TopbarBig color="var(--yellow)" showBack={false} />
+        <div className="notfound-hoomie">
+          <Hoomie HoomieState={Hoomie404} />
+        </div>
       </div>
 
       <div className="notfound-bottom">

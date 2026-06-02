@@ -8,6 +8,28 @@
   overflow: hidden;
 }
 
+.notfound-top {
+  position: relative;
+}
+
+.notfound-hoomie {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.notfound-hoomie .hoomie {
+  padding: 0;
+}
+
+.notfound-hoomie .hoomie__image-wrap {
+  width: clamp(140px, 38vw, 200px);
+  margin: 0;
+}
+
 .notfound-back {
   position: absolute;
   top: 20px;
