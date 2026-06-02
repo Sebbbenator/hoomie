@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  max-width: 480px;
+  max-width: 430px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -82,7 +82,8 @@
   color: var(--dark-color);
   border: none;
   border-radius: 8px;
-  padding: 16px 120px;
+  padding: 16px 24px;
+  width: min(100%, 320px);
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;

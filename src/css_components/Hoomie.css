@@ -6,7 +6,7 @@
 
 .hoomie__image-wrap {
   position: relative;
-  width: 240px;
+  width: clamp(180px, 61vw, 240px);
   margin: 0 auto 12px;
 }
 
