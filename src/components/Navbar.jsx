@@ -24,7 +24,7 @@ export default function Navbar() {
             fill="currentColor"
           />
         </NavbarIcon>
-        <span className="navbar-label">Task</span>
+        <span className="navbar-label">Opgaver</span>
       </NavLink>
       <NavLink
         to="/list"
@@ -40,7 +40,7 @@ export default function Navbar() {
             fill="currentColor"
           />
         </NavbarIcon>
-        <span className="navbar-label">List</span>
+        <span className="navbar-label">Indkøb</span>
       </NavLink>
       <NavLink
         to="/dashboard"
@@ -70,7 +70,7 @@ export default function Navbar() {
             fill="currentColor"
           />
         </NavbarIcon>
-        <span className="navbar-label">Calendar</span>
+        <span className="navbar-label">Kalender</span>
       </NavLink>
       <NavLink
         to="/profile"
@@ -86,7 +86,7 @@ export default function Navbar() {
             fill="currentColor"
           />
         </NavbarIcon>
-        <span className="navbar-label">Profile</span>
+        <span className="navbar-label">Profil</span>
       </NavLink>
     </nav>
   );
