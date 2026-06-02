@@ -48,7 +48,7 @@ export default function Navbar() {
           `navbar-link navbar-link--dashboard${isActive ? " is-active" : ""}`
         }
       >
-        <img src="/logo.svg" alt="Hoomie" className="navbar-logo" />
+        <img src="../logo.svg" alt="Hoomie" className="navbar-logo" />
       </NavLink>
       <NavLink
         to="/calendar"
