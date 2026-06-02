@@ -6,19 +6,23 @@ export default function TopbarLarge({
   title = "Side Titel",
   settingsLabel = "Open settings",
   onSettingsClick,
+  showSettings = true,
+  showTitle = true,
 }) {
   return (
     <div className="topbar-large" style={{ "--topbar-color": color }}>
       <div className="topbar-large__content">
-        <h1 className="topbar-large__title">{title}</h1>
-        <button
-          type="button"
-          className="topbar-large__notification"
-          onClick={onSettingsClick}
-          aria-label={settingsLabel}
-        >
-          <img src={settingsIcon} alt="" aria-hidden="true" />
-        </button>
+        {showTitle && <h1 className="topbar-large__title">{title}</h1>}
+        {showSettings && (
+          <button
+            type="button"
+            className="topbar-large__notification"
+            onClick={onSettingsClick}
+            aria-label={settingsLabel}
+          >
+            <img src={settingsIcon} alt="" aria-hidden="true" />
+          </button>
+        )}
       </div>
       <svg
         className="topbar-large__shape"
