@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { supabase } from "../lib/supabaseClient";
 import TopbarLarge from "../components/TopbarLarge";
 import Hoomie from "../components/Hoomie";
-import HoomieSmile from "../assets/Hoomie/HoomieSmile.svg";
+import HoomieKlovn from "../assets/Hoomie/HoomieKlovn.svg";
 import starIcon from "../assets/icons/point.svg";
 import "../css_pages/ProfilePage.css";
 
@@ -81,7 +81,7 @@ export default function ProfilePage() {
           settingsLabel="Gå til indstillinger"
         />
         <div className="profile-hoomie">
-          <Hoomie HoomieState={HoomieSmile} />
+          <Hoomie HoomieState={HoomieKlovn} />
         </div>
       </header>
       <main className="profile-page">
