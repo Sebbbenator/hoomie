@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { supabase } from "../lib/supabaseClient";
 import TopbarLarge from "../components/TopbarLarge";
+import Hoomie from "../components/Hoomie";
+import HoomieKlovn from "../assets/Hoomie/HoomieKlovn.svg";
 import starIcon from "../assets/icons/point.svg";
 import "../css_pages/ProfilePage.css";
 
@@ -71,18 +73,19 @@ export default function ProfilePage() {
 
   return (
     <>
-      <header>
+      <header className="profile-top">
         <TopbarLarge
           title="Profil"
           color="var(--blue)"
           onSettingsClick={handleSettingsClick}
           settingsLabel="Gå til indstillinger"
         />
+        <div className="profile-hoomie">
+          <Hoomie HoomieState={HoomieKlovn} />
+        </div>
       </header>
       <main className="profile-page">
-        <p className="profile-greeting">
-          Godmorgen {userName}
-        </p>
+        <p className="profile-greeting">Godmorgen {userName}</p>
 
         <div className="profile-xp-bar" aria-label="XP fremgang">
           <div className="profile-xp-level">1</div>
@@ -109,29 +112,50 @@ export default function ProfilePage() {
         <section className="profile-notifications">
           <div className="profile-notifications__header">
             <h2 className="profile-notifications__title">Notifikationer</h2>
-            <span className="profile-notifications__see-all" onClick={() => navigate("/notifications")} role="button">Se Alle</span>
+            <span
+              className="profile-notifications__see-all"
+              onClick={() => navigate("/notifications")}
+              role="button"
+            >
+              Se Alle
+            </span>
           </div>
           {NOTIFICATIONS.map((n) => (
             <div key={n.id} className="profile-notification-card">
               <div className="profile-notification-card__top">
-                <div className="profile-notification-card__avatar" aria-hidden="true" />
+                <div
+                  className="profile-notification-card__avatar"
+                  aria-hidden="true"
+                />
                 <div className="profile-notification-card__meta">
-                  <span className="profile-notification-card__user">{n.user}</span>
-                  <span className="profile-notification-card__time">{n.time}</span>
+                  <span className="profile-notification-card__user">
+                    {n.user}
+                  </span>
+                  <span className="profile-notification-card__time">
+                    {n.time}
+                  </span>
                 </div>
                 <div className="profile-notification-card__icons">
                   <img src={starIcon} alt="" aria-hidden="true" />
                   <span>#</span>
                 </div>
               </div>
-              <p className="profile-notification-card__description">{n.description}</p>
-              <button className="profile-notification-card__action">Godt klaret!</button>
+              <p className="profile-notification-card__description">
+                {n.description}
+              </p>
+              <button className="profile-notification-card__action">
+                Godt klaret!
+              </button>
             </div>
           ))}
         </section>
 
         {error && <p>{error}</p>}
-        <button className="profile-logout-btn" onClick={handleLogOut} disabled={loading}>
+        <button
+          className="profile-logout-btn"
+          onClick={handleLogOut}
+          disabled={loading}
+        >
           {loading ? "Logger ud..." : "Log ud"}
         </button>
       </main>

@@ -44,10 +44,6 @@
   color: var(--yellow);
 }
 
-.navbar-link--dashboard.is-active {
-  color: var(--violet);
-}
-
 .navbar-link--calendar.is-active {
   color: var(--orange);
 }
@@ -59,4 +55,10 @@
 .navbar-label {
   font-size: 0.75rem;
   letter-spacing: 0.02em;
+}
+
+.navbar-logo {
+  width: 36px;
+  height: 55px;
+  display: block;
 }
