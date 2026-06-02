@@ -37,14 +37,8 @@ export default function App() {
     }
   });
   //Ai hjalp med hvordan jeg skulle gemme navbar på log in og sign up siden
-  const hideNavbar =
-    location.pathname === "/" ||
-    location.pathname === "/preboarding-task" ||
-    location.pathname === "/preboarding-features" ||
-    location.pathname === "/preboarding-leaderboard" ||
-    location.pathname === "/preboarding-signup" ||
-    location.pathname === "/signup" ||
-    location.pathname === "/signin";
+  const navbarRoutes = ["/dashboard", "/task", "/list", "/profile", "/calendar"];
+  const hideNavbar = !navbarRoutes.includes(location.pathname);
 
   // Ai hjalp med hvordan jeg kunne implementere lottie animationen, når appen starter */
   if (showOpenApp) {
