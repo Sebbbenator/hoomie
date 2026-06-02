@@ -11,9 +11,12 @@ export default function NotFoundPage() {
     <div className="notfound-page">
       <div className="notfound-top">
         <TopbarBig color="var(--yellow)" showBack={false} />
+
         <div className="notfound-hoomie">
           <Hoomie HoomieState={Hoomie404} />
         </div>
+
+      
       </div>
 
       <div className="notfound-bottom">
