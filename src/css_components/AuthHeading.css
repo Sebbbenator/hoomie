@@ -1,19 +1,17 @@
 .auth-heading {
   text-align: center;
-  margin-bottom: 2.5rem;
   font-family: var(--main-font);
 }
 
 .auth-heading__title {
-  font-size: clamp(2.4rem, 6vw, 3.75rem);
+  font-size: clamp(2.2rem, 5.2vw, 3.4rem);
   font-weight: 800;
   line-height: 0.95;
-  margin-bottom: 1.2rem;
   color: var(--white);
 }
 
 .auth-heading__subtitle {
-  font-size: clamp(1.2rem, 3.4vw, 1.9rem);
+  font-size: clamp(1.05rem, 3vw, 1.7rem);
   line-height: 1.35;
   font-weight: 700;
   color: var(--white);
