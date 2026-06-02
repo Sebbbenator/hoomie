@@ -8,6 +8,7 @@ import "../css_pages/TaskPage.css";
 import othersIcon from "../assets/icons/others.svg";
 import kitchenIcon from "../assets/icons/kitchen.svg";
 import bathIcon from "../assets/icons/bath.svg";
+import rightArrowIcon from "../assets/icons/right-arrow.svg";
 import livingRoomIcon from "../assets/icons/living-room.svg";
 import outsideIcon from "../assets/icons/outside.svg";
 import pointIcon from "../assets/icons/point.svg";
@@ -145,7 +146,7 @@ export default function TaskPage() {
                   {task.points} point
                 </span>
               </div>
-              <img className="task-item-chevron" src="/src/assets/icons/right-arrow.svg" alt="" />
+              <img className="task-item-chevron" src={rightArrowIcon} alt="" />
             </li>
           ))}
           {filtered.length === 0 && (
