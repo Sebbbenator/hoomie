@@ -43,6 +43,8 @@
   width: clamp(100px, 28vw, 130px);
   height: auto;
   flex-shrink: 0;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .topbar-medium__shape {

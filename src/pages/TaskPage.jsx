@@ -213,23 +213,24 @@ export default function TaskPage() {
                 rows={4}
               />
 
-              <AuthButton type="submit" variant="success" className="task-submit-btn">
-                {editTask ? "Opdater" : "Opret"}
-              </AuthButton>
-
-              {editTask && (
-                <AuthButton
-                  variant="danger"
-                  className="task-delete-btn"
-                  onClick={handleDelete}
-                >
-                  Slet opgave
+              {editTask ? (
+                <div className="task-modal-buttons">
+                  <AuthButton
+                    variant="danger"
+                    className="task-delete-btn"
+                    onClick={handleDelete}
+                  >
+                    Slet
+                  </AuthButton>
+                  <AuthButton type="submit" variant="success" className="task-submit-btn">
+                    Opdater
+                  </AuthButton>
+                </div>
+              ) : (
+                <AuthButton type="submit" variant="success" className="task-submit-btn">
+                  Opret
                 </AuthButton>
               )}
-
-              <button type="button" className="task-cancel-btn" onClick={closeModal}>
-                Annuller
-              </button>
             </form>
           </div>
         </div>

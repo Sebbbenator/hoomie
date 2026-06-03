@@ -3,7 +3,7 @@ import "../css_components/NavbarIcon.css";
 export default function NavbarIcon({
   label,
   color = "currentColor",
-  size = 32,
+  size = 26,
   viewBox = "0 0 44 44",
   className = "",
   children,

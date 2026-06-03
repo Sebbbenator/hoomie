@@ -119,7 +119,7 @@
 .task-modal-overlay {
   position: fixed;
   inset: 0;
-  background: var(--text-color-black);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: flex-end;
   z-index: 200;
@@ -128,7 +128,7 @@
 .task-modal {
   background: var(--background-color);
   border-radius: 20px 20px 0 0;
-  padding: var(--spacing-xl) var(--spacing-m) var(--spacing-xxxl);
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-xxxl);
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
@@ -141,20 +141,22 @@
   color: var(--text-color);
   font-size: 1.2rem;
   margin-bottom: var(--spacing-xs);
+  text-align: center;
 }
 
 .task-label {
   color: var(--text-color);
   font-size: 0.8rem;
+  font-weight: 600;
   margin-top: var(--spacing-xs);
 }
 
 .task-input {
-  background: var(--cards-color);
+  background: var(--white);
   border: none;
   border-radius: 10px;
   padding: var(--spacing-s) var(--spacing-m);
-  color: var(--text-color);
+  color: var(--text-color-black);
   font-family: var(--main-font);
   font-size: 0.95rem;
   width: 100%;
@@ -199,25 +201,29 @@
 }
 
 
-.task-submit-btn,
-.task-delete-btn,
-.task-cancel-btn {
+.task-modal-buttons {
+  display: flex;
+  gap: var(--spacing-s);
+  margin-top: var(--spacing-xs);
+}
+
+.task-modal-buttons .task-delete-btn,
+.task-modal-buttons .task-submit-btn {
+  flex: 1;
+  margin-top: 0;
+}
+
+.task-modal-buttons .task-delete-btn .auth-button,
+.task-modal-buttons .task-submit-btn .auth-button {
   width: 100%;
+  height: 100%;
+}
+
+.task-submit-btn {
   margin-top: var(--spacing-xs);
 }
 
 .task-submit-btn .auth-button,
 .task-delete-btn .auth-button {
   width: 100%;
-}
-
-.task-cancel-btn {
-  background: none;
-  border: none;
-  color: var(--text-color);
-  font-family: var(--main-font);
-  font-size: 0.9rem;
-  padding: var(--spacing-s);
-  cursor: pointer;
-  text-align: center;
 }

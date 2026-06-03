@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import NavbarIcon from "./NavbarIcon";
+import logo from "../assets/icons/logo.svg";
 import "../css_components/Navbar.css";
 
 export default function Navbar() {
@@ -48,7 +49,7 @@ export default function Navbar() {
           `navbar-link navbar-link--dashboard${isActive ? " is-active" : ""}`
         }
       >
-        <img src="../logo.svg" alt="Hoomie" className="navbar-logo" />
+        <img src={logo} alt="Hoomie" className="navbar-logo" />
       </NavLink>
       <NavLink
         to="/calendar"
