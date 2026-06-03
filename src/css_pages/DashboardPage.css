@@ -13,3 +13,7 @@
   padding: var(--spacing-m);
   align-items: stretch;
 }
+
+.dashboard-page .profile-notifications {
+  padding: var(--spacing-m);
+}
