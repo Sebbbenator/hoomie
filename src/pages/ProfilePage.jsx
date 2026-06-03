@@ -43,15 +43,15 @@ export default function ProfilePage() {
 
   let greeting;
 
-    if (hour >= 5 && hour < 12) {
-      greeting = "Godmorgen";
-    } else if (hour >= 12 && hour < 17) {
-      greeting = "Hejsa";
-    } else if (hour >= 17 && hour < 22) {
-      greeting = "Godaften";
-    } else {
-      greeting = "Godnat";
-    }
+  if (hour >= 5 && hour < 12) {
+    greeting = "Godmorgen";
+  } else if (hour >= 12 && hour < 17) {
+    greeting = "Hejsa";
+  } else if (hour >= 17 && hour < 22) {
+    greeting = "Godaften";
+  } else {
+    greeting = "Godnat";
+  }
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => {
@@ -77,7 +77,7 @@ export default function ProfilePage() {
       return;
     }
 
-    navigate("/", { replace: true });
+    navigate("/signin", { replace: true });
   };
 
   const handleSettingsClick = () => {

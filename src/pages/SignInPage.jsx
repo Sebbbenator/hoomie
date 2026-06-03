@@ -7,6 +7,8 @@ import AuthButton from "../components/AuthButton";
 import AuthHeading from "../components/AuthHeading";
 import { supabase } from "../lib/supabaseClient";
 import TopbarBig from "../components/TopbarBig";
+import Hoomie from "../components/Hoomie";
+import HoomieSmile from "../assets/Hoomie/HoomieSmile.svg";
 
 function SignInPage() {
   const navigate = useNavigate();
@@ -56,6 +58,9 @@ function SignInPage() {
     <div className="signin-page">
       <div className="signin-page__topbar">
         <TopbarBig color="var(--violet)" />
+        <div className="signin-hoomie">
+          <Hoomie HoomieState={HoomieSmile} />
+        </div>
       </div>
 
       <main className="signin-page__content">

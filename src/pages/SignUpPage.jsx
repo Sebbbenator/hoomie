@@ -5,6 +5,8 @@ import AuthButton from "../components/AuthButton";
 import AuthHeading from "../components/AuthHeading";
 import TopbarBig from "../components/TopbarBig";
 import { supabase } from "../lib/supabaseClient";
+import Hoomie from "../components/Hoomie";
+import HoomieSmile from "../assets/Hoomie/HoomieSmile.svg";
 
 function SignUpPage() {
   const emailRedirectTo = new URL("/", window.location.origin).toString();
@@ -78,6 +80,9 @@ function SignUpPage() {
     <div className="signup-page">
       <div className="signup-page__topbar">
         <TopbarBig color="var(--green)" />
+        <div className="signup-hoomie">
+          <Hoomie HoomieState={HoomieSmile} />
+        </div>
       </div>
 
       <main className="signup-page__content">
