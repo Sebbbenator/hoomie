@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "user": "Daniel",
+    "time": "For 2 timer siden",
+    "description": "Du har fuldført din første opgave. Godt gået!"
+  },
+  {
+    "id": 2,
+    "user": "Daniel",
+    "time": "I går",
+    "description": "Taget skrald ud."
+  },
+  {
+    "id": 3,
+    "user": "Martin",
+    "time": "For 3 dage siden",
+    "description": "Har nået et nyt milepæl! Gør badeværelse rent 5 gange."
+  },
+  {
+    "id": 4,
+    "user": "Sebastian",
+    "time": "For 6 dage siden",
+    "description": "Afrimet fryseren."
+  }
+]

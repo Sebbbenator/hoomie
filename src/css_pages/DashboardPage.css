@@ -1,5 +1,4 @@
 .dashboard-page {
-  padding: var(--spacing-m);
   padding-bottom: 7rem;
   display: flex;
   flex-direction: column;
@@ -7,8 +6,14 @@
 }
 
 .dashboard-page__widgets {
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--spacing-m);
+  padding: var(--spacing-m);
+  align-items: stretch;
 }
 
+.dashboard-page .profile-notifications {
+  padding: var(--spacing-m);
+}
