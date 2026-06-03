@@ -9,6 +9,18 @@
 .dashboard-page__widgets {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: var(--spacing-m);
+}
+
+.dashboard-page__widgets > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 720px) {
+  .dashboard-page__widgets > * {
+    flex-basis: 100%;
+  }
 }
 

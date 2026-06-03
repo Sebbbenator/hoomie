@@ -4,6 +4,7 @@ import HoomieKlovn from "../assets/Hoomie/HoomieKlovn.svg";
 import HoomieDown from "../assets/Hoomie/HoomieDown.svg";
 import Hoomie404 from "../assets/Hoomie/Hoomie404.svg";
 import ShoppingWidget from "../components/ShoppingWidget";
+import CalendarWidget from "../components/CalendarWidget";
 
 export default function DashboardPage() {
   return (
@@ -11,7 +12,7 @@ export default function DashboardPage() {
       <TopbarMedium color="var(--violet)" hoomieState={HoomieKlovn} />
       <section className="small-widgets dashboard-page__widgets">
         <ShoppingWidget />
-        <ShoppingWidget />
+        <CalendarWidget />
       </section>
     </div>
   );

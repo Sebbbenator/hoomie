@@ -1,0 +1,117 @@
+.calendar-widget-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.calendar-widget {
+    width: 100%;
+  max-width: 100%;
+  background: var(--cards-color);
+  border-radius: 30px;
+  padding: 28px;
+  color: var(--text-color);
+  position: relative;
+  box-shadow: 0 12px 24px var(--cards-color);
+}
+
+.calendar-widget .widget-header {
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.calendar-widget .widget-header h2 {
+  margin: 0;
+  color: var(--orange);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+.calendar-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.date-section {
+  margin-top: 1.5rem;
+}
+
+.date {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.weekday {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.event-section {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.event-bar {
+  width: 0.75rem;
+  height: 8rem;
+  border-radius: 999px;
+  background: #9b72f2;
+  flex-shrink: 0;
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.event-time {
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.next-button {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.next-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 720px) {
+  .calendar-widget {
+    padding: 1rem;
+  }
+
+  .widget-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .date {
+    font-size: 2rem;
+  }
+
+  .event-title {
+    font-size: 1.35rem;
+  }
+}
