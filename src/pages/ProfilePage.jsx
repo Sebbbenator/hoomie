@@ -3,35 +3,15 @@ import { useNavigate } from "react-router";
 import { supabase } from "../lib/supabaseClient";
 import TopbarLarge from "../components/TopbarLarge";
 import Hoomie from "../components/Hoomie";
+import Notification from "../components/Notification";
 import HoomieKlovn from "../assets/Hoomie/HoomieKlovn.svg";
-import starIcon from "../assets/icons/point.svg";
+import NOTIFICATIONS from "../data/notifications.json";
 import "../css_pages/ProfilePage.css";
 
 const XP_TOTAL_BLOCKS = 8;
 const XP_FILLED_BLOCKS = 3;
 
 const TABS = ["Historik", "Milepæle", "Dokumenter", "Ejendele"];
-
-const NOTIFICATIONS = [
-  {
-    id: 1,
-    user: "Bruger",
-    time: "For 2 timer siden",
-    description: "Du har fuldført din første opgave. Godt gået!",
-  },
-  {
-    id: 2,
-    user: "Bruger",
-    time: "I går",
-    description: "Taget skrald ud.",
-  },
-  {
-    id: 3,
-    user: "Bruger",
-    time: "For 3 dage siden",
-    description: "Du har nået et nyt milepæl, se din nye hat.",
-  },
-];
 
 export default function ProfilePage() {
   const navigate = useNavigate();
@@ -136,32 +116,7 @@ export default function ProfilePage() {
             </span>
           </div>
           {NOTIFICATIONS.map((n) => (
-            <div key={n.id} className="profile-notification-card">
-              <div className="profile-notification-card__top">
-                <div
-                  className="profile-notification-card__avatar"
-                  aria-hidden="true"
-                />
-                <div className="profile-notification-card__meta">
-                  <span className="profile-notification-card__user">
-                    {n.user}
-                  </span>
-                  <span className="profile-notification-card__time">
-                    {n.time}
-                  </span>
-                </div>
-                <div className="profile-notification-card__icons">
-                  <img src={starIcon} alt="" aria-hidden="true" />
-                  <span>#</span>
-                </div>
-              </div>
-              <p className="profile-notification-card__description">
-                {n.description}
-              </p>
-              <button className="profile-notification-card__action">
-                Godt klaret!
-              </button>
-            </div>
+            <Notification key={n.id} notification={n} />
           ))}
         </section>
 
