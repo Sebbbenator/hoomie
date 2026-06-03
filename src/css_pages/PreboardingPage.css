@@ -38,6 +38,10 @@
   text-align: center;
 }
 
+.preboarding-page--signup .preboarding-page__overlay {
+  gap: 5rem;
+}
+
 .preboarding-page__heading {
   margin-bottom: 0;
   pointer-events: auto;

@@ -25,7 +25,7 @@ export default function PreboardingSignupPage() {
   };
 
   return (
-    <main className="preboarding-page">
+    <main className="preboarding-page preboarding-page--signup">
       <div className="preboarding-page__stage">
         <Lottie
           lottieRef={lottieRef}
