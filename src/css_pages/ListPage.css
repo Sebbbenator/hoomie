@@ -95,10 +95,8 @@
 }
 
 .list-item-chevron {
-  width: 18px;
-  height: 18px;
-  opacity: 0.4;
-  filter: invert(1);
+  width: 40px;
+  height: 40px;
 }
 
 .list-empty {
