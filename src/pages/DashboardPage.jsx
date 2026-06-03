@@ -5,6 +5,7 @@ import HoomieDown from "../assets/Hoomie/HoomieDown.svg";
 import Hoomie404 from "../assets/Hoomie/Hoomie404.svg";
 import ShoppingWidget from "../components/ShoppingWidget";
 import CalendarWidget from "../components/CalendarWidget";
+import "../css_pages/DashboardPage.css";
 
 export default function DashboardPage() {
   return (

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import rightArrow from "../assets/icons/right-arrow.svg";
-import shoppingCart from "../assets/icons/shopping.svg";
+import shoppingCart from "../assets/icons/shoppingFull.svg";
 import "../css_components/ShoppingWidget.css";
 
 export default function ShoppingWidget() {

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import rightArrow from "../assets/icons/right-arrow.svg";
-import calendar from "../assets/icons/calender.svg";
+import calendar from "../assets/icons/calendarFull.svg";
 import "../css_components/CalendarWidget.css";
 
 export default function CalendarWidget() {

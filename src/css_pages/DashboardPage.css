@@ -1,5 +1,4 @@
 .dashboard-page {
-  padding: var(--spacing-m);
   padding-bottom: 7rem;
   display: flex;
   flex-direction: column;
@@ -7,20 +6,10 @@
 }
 
 .dashboard-page__widgets {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--spacing-m);
+  padding: var(--spacing-m);
+  align-items: stretch;
 }
-
-.dashboard-page__widgets > * {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-@media (max-width: 720px) {
-  .dashboard-page__widgets > * {
-    flex-basis: 100%;
-  }
-}
-
