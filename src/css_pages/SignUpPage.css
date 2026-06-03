@@ -17,6 +17,24 @@
   fill: var(--green);
 }
 
+.signup-hoomie {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.signup-hoomie .hoomie {
+  padding: 0;
+}
+
+.signup-hoomie .hoomie__image-wrap {
+  width: clamp(120px, 34vw, 180px);
+  margin: 0;
+}
+
 .signup-page__content {
   margin-top: 0;
   padding: 2.5rem 2rem 3rem;
