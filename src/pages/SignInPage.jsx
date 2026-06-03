@@ -112,7 +112,7 @@ function SignInPage() {
               className="signin-page__submit"
               disabled={loading || !email || !password}
             >
-              {loading ? "Please wait..." : "Log ind"}
+              {loading ? "Vent venligst..." : "Log ind"}
             </AuthButton>
 
             <AuthButton
