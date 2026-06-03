@@ -7,6 +7,7 @@ import TopbarBig from "../components/TopbarBig";
 import { supabase } from "../lib/supabaseClient";
 import Hoomie from "../components/Hoomie";
 import HoomieSmile from "../assets/Hoomie/HoomieSmile.svg";
+import HoomieUp from "../assets/Hoomie/HoomieUp.svg";
 
 function SignUpPage() {
   const emailRedirectTo = new URL("/", window.location.origin).toString();
@@ -18,6 +19,7 @@ function SignUpPage() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+  const [passwordFocused, setPasswordFocused] = useState(false);
 
   const handleSignUp = async (event) => {
     event.preventDefault();
@@ -81,7 +83,7 @@ function SignUpPage() {
       <div className="signup-page__topbar">
         <TopbarBig color="var(--green)" />
         <div className="signup-hoomie">
-          <Hoomie HoomieState={HoomieSmile} />
+          <Hoomie HoomieState={passwordFocused ? HoomieUp : HoomieSmile} />
         </div>
       </div>
 
@@ -127,6 +129,8 @@ function SignUpPage() {
               placeholder="Adgangskode"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onFocus={() => setPasswordFocused(true)}
+              onBlur={() => setPasswordFocused(false)}
               disabled={loading}
             />
             <input
@@ -135,6 +139,8 @@ function SignUpPage() {
               placeholder="Bekræft Adgangskode"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
+              onFocus={() => setPasswordFocused(true)}
+              onBlur={() => setPasswordFocused(false)}
               disabled={loading}
             />
 
@@ -146,7 +152,7 @@ function SignUpPage() {
                 loading || !name || !email || !password || !confirmPassword
               }
             >
-              {loading ? "Please wait..." : "Opret Bruger"}
+              {loading ? "Vent venligst..." : "Opret Bruger"}
             </AuthButton>
           </form>
         </section>

@@ -9,6 +9,7 @@ import { supabase } from "../lib/supabaseClient";
 import TopbarBig from "../components/TopbarBig";
 import Hoomie from "../components/Hoomie";
 import HoomieSmile from "../assets/Hoomie/HoomieSmile.svg";
+import HoomieUp from "../assets/Hoomie/HoomieUp.svg";
 
 function SignInPage() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ function SignInPage() {
   const [user, setUser] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [passwordFocused, setPasswordFocused] = useState(false);
 
   const handleLogin = async () => {
     setError("");
@@ -59,7 +61,7 @@ function SignInPage() {
       <div className="signin-page__topbar">
         <TopbarBig color="var(--violet)" />
         <div className="signin-hoomie">
-          <Hoomie HoomieState={HoomieSmile} />
+          <Hoomie HoomieState={passwordFocused ? HoomieUp : HoomieSmile} />
         </div>
       </div>
 
@@ -94,6 +96,8 @@ function SignInPage() {
               placeholder="Adgangskode"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onFocus={() => setPasswordFocused(true)}
+              onBlur={() => setPasswordFocused(false)}
               disabled={loading}
             />
 
