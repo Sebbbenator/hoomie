@@ -16,22 +16,3 @@
   margin-left: -12.5%;
   height: auto;
 }
-
-.hoomie__eyes {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: auto;
-  pointer-events: none;
-}
-
-.hoomie__title {
-  margin: 8px 0 4px;
-}
-
-.hoomie__subtitle {
-  margin: 0;
-  color: #666;
-}
